@@ -1,14 +1,14 @@
 syntax = "proto3";
 
-package nvidia.convai.nlp;
+package nvidia.jarvis.nlp;
 
 option cc_enable_arenas = true;
 
-import "src/convai_proto/convai_nlp_core.proto";
+import "src/jarvis_proto/jarvis_nlp_core.proto";
 
-// convai NLP Services implement task-specific APIs for popular NLP tasks including
+// Jarvis NLP Services implement task-specific APIs for popular NLP tasks including
 // intent recognition (as well as slot filling), and entity extraction.
-service convaiNLP {
+service JarvisNLP {
   // AnalyzeEntities accepts an input string and returns all named entities within
   // the text, as well as a category and likelihood.
   rpc AnalyzeEntities(AnalyzeEntitiesRequest) returns (TokenClassResponse) {}

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package nvidia.convai;
+package nvidia.jarvis;
 
 option cc_enable_arenas = true;
 

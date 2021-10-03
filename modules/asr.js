@@ -21,11 +21,11 @@ const languageCode = "en-US";
 
 // Because of a quirk in proto-loader, we use static code gen to get the AudioEncoding enum,
 // and dynamic loading for the rest.
-const jAudio = require("./protos/src/convai_proto/audio_pb");
+const jAudio = require("./protos/src/jarvis_proto/audio_pb");
 
 const { Transform } = require("stream");
 
-var asrProto = "src/convai_proto/convai_asr.proto";
+var asrProto = "src/jarvis_proto/jarvis_asr.proto";
 var protoRoot = __dirname + "/protos/";
 var grpc = require("grpc");
 var protoLoader = require("@grpc/proto-loader");
@@ -40,13 +40,13 @@ var protoOptions = {
 };
 var asrPkgDef = protoLoader.loadSync(asrProto, protoOptions);
 
-var jAsr = grpc.loadPackageDefinition(asrPkgDef).nvidia.convai.asr;
+var jAsr = grpc.loadPackageDefinition(asrPkgDef).nvidia.jarvis.asr;
 
 class ASRPipe {
   setupASR() {
     // the ConvAI Live ASR client
-    this.asrClient = new jAsr.convaiASR(
-      process.env.CONVAI,
+    this.asrClient = new jAsr.JarvisASR(
+      process.env.CONVAI_API_URL,
       grpc.credentials.createInsecure()
     );
     this.firstRequest = {

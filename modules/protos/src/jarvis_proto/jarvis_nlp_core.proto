@@ -1,18 +1,18 @@
 syntax = "proto3";
 
-package nvidia.convai.nlp;
+package nvidia.jarvis.nlp;
 
 option cc_enable_arenas = true;
 
 /*
- * The convai Core NLP Service provides generic NLP services for custom
+ * The Jarvis Core NLP Service provides generic NLP services for custom
  * model use cases. The intent of this service is to allow users to design
  * models for arbitrary use cases that conform simply with input and output types
  * specified in the service. As an explicit example, the ClassifyText function
  * could be used for sentiment classification, domain recognition, language
  * identification, etc.
  */
-service convaiCoreNLP {
+service JarvisCoreNLP {
   // ClassifyText takes as input an input/query string and parameters related
   // to the requested model to use to evaluate the text. The service evaluates the
   // text with the requested model, and returns one or more classifications.

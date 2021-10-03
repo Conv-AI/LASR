@@ -1,15 +1,15 @@
 syntax = "proto3";
 
-package nvidia.convai.asr;
+package nvidia.jarvis.asr;
 
 option cc_enable_arenas = true;
 
-import "src/convai_proto/audio.proto";
+import "src/jarvis_proto/audio.proto";
 
 /*
- * The convaiASR service provides two mechanisms for converting speech to text.
+ * The JarvisASR service provides two mechanisms for converting speech to text.
  */
-service convaiASR {
+service JarvisASR {
     // Recognize expects a RecognizeRequest and returns a RecognizeResponse. This request will block
     // until the audio is uploaded, processed, and a transcript is returned.
     rpc Recognize(RecognizeRequest) returns (RecognizeResponse) {}
@@ -35,7 +35,7 @@ message RecognizeRequest {
 
 /*
  * A StreamingRecognizeRequest is used to configure and stream audio content to the
- * convai ASR Service. The first message sent must include only a StreamingRecognitionConfig.
+ * Jarvis ASR Service. The first message sent must include only a StreamingRecognitionConfig.
  * Subsequent messages sent in the stream must contain only raw bytes of the audio
  * to be recognized.
  */
