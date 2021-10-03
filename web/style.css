@@ -1,0 +1,35 @@
+.scroll {
+  max-height: 450px;
+  overflow-y: auto;
+}
+.center {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+  padding: 0.25rem 0.4rem;
+  font-size: 0.875rem;
+  line-height: 0.5;
+  border-radius: 0.2rem;
+}
+
+.toast-success {
+  background-color: var(--primary);
+}
+.toast-error {
+  background-color: var(--danger);
+}
+.toast-info {
+  background-color: var(--info);
+}
+.toast-warning {
+  background-color: var(--warning);
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
