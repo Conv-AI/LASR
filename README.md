@@ -1,12 +1,46 @@
 # ConvAI Live Speech Recognition
 
-## Commands
+ConvAI Live Speech Recogniton provides real time transcriptions for users using AI models trained on custom data that suits the business needs of its users.
 
-Run `$ npm install` then `$ node server.js`
+## How to set-up ConvAI LASR
 
-## Running the service as a Docker container :
-### 1. Building the Docker image :
- Run `sudo docker build -t lasr_image . `
-### 2. Running the Docker image in the container :
- Run `sudo docker run -p 8009:8009 --name lasr_container -d lasr_image` 
-### 3. go to `https://localhost:8009/`
+### 1. Clone this repository
+
+```
+$ git clone https://github.com/Conv-AI/LASR.git
+
+$ cd LASR
+```
+
+### 2. Configuring parameters for the service
+
+You can specify the port to start the application on in the ```env.txt``` file, present in the folder. By default it is set to 8009.
+
+##### Note: Do not over-ride the ip address for the ConvAI servers
+
+### 3.Download the docker image
+
+```
+```
+
+### 4.Build a dockerimage from the Dockerfile and run
+
+```
+$ docker build -t lasr_image .
+
+$ docker run -p 8009:8009 --name lasr_container -d lasr_image
+```
+Visit `https://localhost:8009/`
+
+### 5. Setup a conda environment for the task
+
+```
+$ conda create -n convai-lasr nodejs
+
+$ conda activate convai-lasr
+
+$ npm install
+
+$ node server.js
+```
+Visit `https://localhost:8009/`
