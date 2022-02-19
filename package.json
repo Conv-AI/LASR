@@ -1,6 +1,6 @@
 {
   "name": "convai-liveasr",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Live Speech Recognition application from ConvAI",
   "main": "server.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Conv-AI/LASR.git"
   },
   "author": "ConvAI",
   "license": "Apache-2.0",
