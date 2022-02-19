@@ -38,10 +38,10 @@ function setupServer() {
   //   res.sendFile("./web/index.html", { root: __dirname });
   // });
   server = https.createServer(
-    {
-      key: fs.readFileSync(sslkey),
-      cert: fs.readFileSync(sslcert),
-    },
+    // {
+    //   key: fs.readFileSync(sslkey),
+    //   cert: fs.readFileSync(sslcert),
+    // },
     app
   );
 
