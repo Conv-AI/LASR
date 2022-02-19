@@ -23,7 +23,7 @@ const ASRPipe = require("./modules/asr");
 const app = express();
 const port = process.env.PORT;
 var server;
-var sslkey = "./certificates/key.pem";
+var sslkey = "./certificates/privkey.pem";
 var sslcert = "./certificates/cert.pem";
 
 /**
